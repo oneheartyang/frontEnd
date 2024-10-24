@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+:root {
+  /* --title-animation-color: #37ff8b; */
+  /* --button-animation-color: #7d2ae8; */
+  /* --input-bottom-animation-color: #7d2ae8; */
+  /* --text-border-color: rgba(255, 255, 255, 0.6); */
+  --text-border-color: #7d2ae8;
+  --title-animation-color: #6d1ed3;
+  --button-animation-color: #7d2ae8;
+  --input-bottom-animation-color: #7d2ae8;
+}

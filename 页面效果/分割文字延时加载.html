@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css" />
+    <style>
+      .wrapper {
+        width: 100%;
+        height: 100vh;
+        background-color: var(--bgColor1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      p {
+        font-size: 2em;
+        line-height: 2em;
+        color: #fff;
+        font-weight: 600;
+      }
+
+      .text {
+        display: flex;
+        flex-wrap: wrap;
+        white-space: pre;
+      }
+
+      .text span {
+        animation: wave 1s ease-out both;
+      }
+
+      @keyframes wave {
+        from {
+          opacity: 0;
+          transform: translateY(-20%);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <p class="text">
+        用JS将句子或单词分割成字母，并给每个字母加上不同延时的动画，同样也很华丽
+      </p>
+    </div>
+
+    <script>
+      const dom = document.querySelector(".text");
+      const letters = dom.textContent.split("");
+      dom.textContent = "";
+
+      letters.forEach((letter, index) => {
+        const span = document.createElement("span");
+        span.textContent = letter;
+        dom.appendChild(span);
+        span.style.animationDelay = `${index * 0.1}s`;
+      });
+    </script>
+  </body>
+</html>
