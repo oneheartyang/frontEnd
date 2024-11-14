@@ -1,0 +1,26 @@
+<krpano version="1.20">
+  <!-- 加载全景图像 -->
+<image>
+    <sphere url="images/qwantani_sunset.jpg" />
+  </image>
+
+  <!-- 设置初始视角 -->
+  <view hlookat="0" vlookat="0" fov="100" />
+
+   <!-- 添加热点 -->
+  <!-- 文本标注点 -->
+  <hotspot name="textSpot1"
+           url="%SWFPATH%/plugins/textfield.swf"   
+           ath="15"                               
+           atv="10"                               
+           width="150"                            
+           height="30"                            
+           align="center"                         
+           edge="center"                           
+           scale="1.0"                             
+           txtfontsize="20"                        
+           txtcolor="0xFFFFFF"                     
+           txtalign="center"                       
+           text="这是一个标注点"                   
+           />                
+</krpano>
